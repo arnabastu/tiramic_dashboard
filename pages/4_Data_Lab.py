@@ -1,4 +1,3 @@
-
 """Data Lab page.   Owner: Member A."""
 import streamlit as st
 
@@ -7,7 +6,6 @@ from tiramic import data_io, serial_reader, simulator as sim, ui
 
 st.set_page_config(page_title="Data Lab", page_icon="🧪", layout="wide")
 st.title("Data Lab")
-
 
 tab1, tab2, tab3 = st.tabs(["Generate simulated data", "Check a CSV", "Record from the ESP32"])
 

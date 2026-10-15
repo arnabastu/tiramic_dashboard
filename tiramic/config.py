@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 """Shared constants. Change numbers HERE and nowhere else."""
 
 SAMPLE_PERIOD_S = 1.0
@@ -27,7 +25,6 @@ METER_NOISE_LPM = 0.08
 METER_GAIN_SPREAD = 0.02
 
 # Detection settings
->>>>>>> 97ecc4a8012d7482cb92e8b84a8337661ac8cf08
 SMOOTH_WINDOW = 10
 K_SIGMA = 4.0
 PERSISTENCE = 5
