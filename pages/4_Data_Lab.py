@@ -6,7 +6,7 @@ from tiramic import data_io, serial_reader, simulator as sim, ui
 
 
 st.set_page_config(page_title="Data Lab", page_icon="🧪", layout="wide")
-st.title("🧪 Data Lab")
+st.title("Data Lab")
 
 
 tab1, tab2, tab3 = st.tabs(["Generate simulated data", "Check a CSV", "Record from the ESP32"])
@@ -20,7 +20,7 @@ with tab1:
     noise_scale = c[2].slider("Meter noise (x normal)", 0.5, 4.0, 1.0, 0.5)
     seed = int(c[3].number_input("Random seed", 0, 9999, 1))
     rig = ui.get_rig(7)
-    leaks = [sim.example_leak(zone, size)] if zone else []
+    leaks = [sim.example_leak(zone,85,size)] if zone else []
     df = sim.simulate(rig, leaks, noise_seed=seed, noise_scale=noise_scale)
     truth = st.checkbox("Include ground-truth columns in the download", False)
     st.dataframe(df.head(60), hide_index=True)
